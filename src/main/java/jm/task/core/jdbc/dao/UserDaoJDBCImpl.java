@@ -20,7 +20,7 @@ public class UserDaoJDBCImpl implements UserDao {
             String SQL = "create table if not exists users(id int auto_increment primary key, username varchar(100), lastname varchar(100), age int(128) not null check (age > 0))";
             statement.execute(SQL);
         } catch (SQLException e) {
-            System.out.println("База данных уже существует");;
+            System.out.println("База данных уже существует");
         }
     }
 
@@ -57,7 +57,7 @@ public class UserDaoJDBCImpl implements UserDao {
             preparedStatement.setLong(1, id);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            System.out.println("Пользователь не найден");;
+            System.out.println("Пользователь не найден");
         }
     }
 
